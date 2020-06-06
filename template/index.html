@@ -1,0 +1,110 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-01 22:15:02
+ * @LastEditTime: 2020-06-06 16:09:02
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \俄罗斯方块\TetrisGame\template\index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯方块</title>
+    <style>
+        .wrapper {
+            margin: 0 auto;
+        }
+        
+        #root {
+            display: flex;
+            justify-content: center;
+        }
+        
+        #curPanel {
+            background: #000;
+            position: relative;
+        }
+        
+        #next {
+            position: relative;
+            margin-left: 1em;
+        }
+        
+        #nextPanel {
+            position: relative;
+        }
+        
+        #msg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.3);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 100;
+        }
+        
+        #msg p {
+            border: 1px solid #fff;
+            background: red;
+            color: #fff;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+        
+        #score {
+            font-size: 2em;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div id="root">
+            <div id="curPanel">
+                <div id="msg">
+                    <p>游戏暂停</p>
+                </div>
+            </div>
+            <div id="next">
+                <div id="nextPanel"></div>
+                <div id="score"></div>
+                <div id="description">
+                    <p>
+                        ↑：旋转
+                    </p>
+                    <p>
+                        ↓：向下移动
+                    </p>
+                    <p>
+                        ←：向左移动
+                    </p>
+                    <p>
+                        →：向右移动
+                    </p>
+                    <p>
+                        空格：游戏开始/暂停/恢复
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="btn-wrapper">
+            <button class="startBtn">开始</button>
+            <button class="pauseBtn">暂停</button>
+            <button class="downBtn">下移</button>
+            <button class="upBtn">上移</button>
+            <button class="leftBtn">左移</button>
+            <button class="rightBtn">右移</button>
+            <button class="rotateBtn">旋转</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
